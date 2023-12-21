@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="style.css">
   
+  
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -32,31 +33,34 @@
         <li>Measuring to ensure updates are a success</li>
         <li>Building And much more!</li>
     </ul>
-    <form>
-      <label for="email">Email address</label><br>
-        <input type="text" id="email" placeholder="email@company.com">
-    </form>
-    
 
-      <button>Subscribe to monthly newsletter</button>
+    <form id="emai" onsubmit="checkForm(event);return false">
+      <label id="emailLabel">Email address <span id="valid"></span></label><br>
+        <input id="email" name="email" required placeholder="email@company.com">
+    </form>
+
+      <button id="button" type="submit" form="emai">Subscribe to monthly newsletter</button>
+
     </div>
-      <!--
-      <div id="right">
+      
+      <div id="desktop">
         <img src="illustration-sign-up-desktop.svg">
-      </div>-->
+      </div>
    </div>
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
-
- <!-- <h1>Thanks for subscribing!</h1>
+   <div id="success" class="container-success">
+ <h1>Thanks for subscribing!</h1>
 
   <p>A confirmation email has been sent to ash@loremcompany.com. 
     Please open it and click the button inside to confirm your subscription.</p>
 
-  <button>Dismiss message</button>
+  <button class="active">Dismiss message</button>
+</div>
 
-   Success message end -->
   
+   <script src="newsletter.js"></script>
 </body>
+
 </html>
